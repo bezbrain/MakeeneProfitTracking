@@ -25,7 +25,6 @@ header {
 
 .open {
   display: none;
-  font-size: 2.5rem;
   animation: gelatinEffect 1s ease-in-out infinite;
   color: var(--darkbronze);
 }
@@ -58,12 +57,27 @@ header {
     top: 40px;
     font-size: 30px;
   }
+  .add-close-anim {
+    animation: bounce 2s 2;
+  }
+
   .open {
     display: block;
     position: absolute;
     top: 40px;
     right: 5vw;
-    font-size: 30px;
+    font-size: 2.2rem;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -155,6 +169,7 @@ nav ul li a button:hover {
     margin-top: 100px;
     flex-direction: column;
     width: fit-content;
+    padding-bottom: 20px;
   }
 
   .know-profit-con {
@@ -183,7 +198,12 @@ h1 {
 @media screen and (max-width: 840px) {
   h1 {
     font-size: 6vw !important;
-    line-height: 1.4cm;
+    line-height: 1.5cm;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    line-height: 1cm;
   }
 }
 

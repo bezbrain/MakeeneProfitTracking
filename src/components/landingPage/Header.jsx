@@ -19,7 +19,10 @@ const Header = () => {
           />
           <nav className={`${toggleNav ? "add-nav" : "remove-nav"}`}>
             <ul>
-              <FaTimes className="close" onClick={() => setToggleNav(false)} />
+              <FaTimes
+                className={`close ${toggleNav ? "add-close-anim" : ""}`}
+                onClick={() => setToggleNav(false)}
+              />
               {navData.map((each) => {
                 const { id, url, text } = each;
                 return (
