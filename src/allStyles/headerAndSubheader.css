@@ -3,6 +3,7 @@ header {
 }
 
 .nav-sect {
+  /* border: 2px solid red; */
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
@@ -12,14 +13,13 @@ header {
 }
 
 .logo-img {
-  /* margin-top: 30px; */
   width: 50px;
 }
 @media screen and (max-width: 1100px) {
   .logo-img {
     position: absolute;
     top: 30px;
-    left: 10%;
+    left: 5vw;
   }
 }
 
@@ -56,14 +56,13 @@ header {
     display: block;
     position: absolute;
     top: 40px;
-    /* right: 50px; */
     font-size: 30px;
   }
   .open {
     display: block;
     position: absolute;
     top: 40px;
-    right: 10%;
+    right: 5vw;
     font-size: 30px;
   }
 }
@@ -141,34 +140,31 @@ nav ul li a button:hover {
 /* ======== */
 /* SubHeader CSS */
 .sub-header-con {
+  /* border: 2px solid green; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   /* height: 90vh; */
   padding-bottom: 100px;
+  padding-left: 5vw;
   max-width: var(--max-width-with-img);
   margin-left: auto;
-  padding-left: 5vw;
 }
 @media screen and (max-width: 1100px) {
   .sub-header-con {
     margin-top: 100px;
     flex-direction: column;
     width: fit-content;
-    margin-left: 0;
-    /* border: 2px solid green; */
   }
 
   .know-profit-con {
-    padding-inline: 10%;
     min-width: 100%;
     z-index: 10;
-    /* border: 2px solid red; */
+    padding-right: 5vw;
   }
 
   .know-profit-img {
     min-width: 100%;
-    /* margin-left: 10%; */
     margin-top: -50px;
     max-height: 800px;
   }
@@ -214,50 +210,4 @@ h1 span {
   /* border: 2px solid green; */
   width: 48%;
   height: 700px;
-}
-@media screen and (min-width: 1100px) {
-  .header-section {
-    /* height: 90vh; */
-    padding-bottom: 4vw;
-  }
-
-  header {
-    padding-inline: 5%;
-  }
-
-  .sub-header-con {
-    max-height: 90vh;
-    padding-left: 5%;
-  }
-
-  .know-profit-img {
-    height: 45vw;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .header-section {
-    /* min-height: 80vh; */
-  }
-
-  header {
-    padding-inline: 11%;
-  }
-
-  .sub-header-con {
-    max-height: 100vh;
-    padding-left: 11%;
-  }
-
-  .know-profit-con {
-    width: 40%;
-  }
-
-  h1 {
-    font-size: 3vw;
-  }
-
-  .know-profit-img {
-    width: 60%;
-    /* max-height: 750px; */
-  }
 }
