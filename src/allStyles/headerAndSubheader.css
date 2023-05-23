@@ -32,7 +32,6 @@ header {
 .close {
   display: none;
 }
-
 @keyframes gelatinEffect {
   0% {
     transform: scale(1);
@@ -110,8 +109,9 @@ nav ul {
 
   nav ul {
     flex-direction: column;
+    justify-content: space-around;
     height: 50vh;
-    margin-top: 150px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 840px) {
