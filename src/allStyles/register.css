@@ -1,0 +1,146 @@
+.sign-up-section,
+.sign-in-section {
+  position: relative;
+  background-color: #000;
+  min-height: 500px;
+}
+
+.sign-in-section {
+  display: none;
+}
+
+.main-con {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  color: white;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .main-con {
+    max-width: 400px;
+    /* border: 2px solid red; */
+  }
+}
+
+.sign-up-form,
+.sign-in-form {
+  /* margin-top: -15px; */
+  border: 5px solid var(--darkbronze);
+  border-radius: 20px;
+  padding: 0 20px 10px 20px;
+  /* border: 2px solid green; */
+}
+
+.filling-error,
+.filling-error-sign-in {
+  color: red;
+  font-size: 15px;
+  margin-bottom: 5px;
+  visibility: hidden;
+}
+
+.email-container,
+.password-container,
+.signin-password-container {
+  position: relative;
+  margin-top: 10px;
+}
+.lab {
+  text-align: left;
+  width: 100px;
+  display: inline-block;
+}
+
+.sign-input,
+.signin-input {
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: none;
+}
+
+.sign-input:focus,
+.signin-input:focus {
+  outline: 5px solid var(--darkbronze);
+}
+
+.sign-input::placeholder,
+.signin-input::placeholder {
+  padding-left: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+@media screen and (max-width: 900px) {
+  .sign-input,
+  .signin-input {
+    width: 230px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .lab {
+    font-size: 16px;
+  }
+  .sign-input,
+  .signin-input {
+    width: 200px;
+    height: 30px;
+  }
+  .sign-input:focus,
+  .signin-input:focus {
+    outline: 3px solid var(--bkColor);
+  }
+  .sign-input::placeholder,
+  .signin-input::placeholder {
+    font-size: 15px;
+  }
+}
+
+.password-container p,
+.signin-password-container p {
+  margin-top: 5px;
+  font-size: 15px;
+  position: absolute;
+  left: 105px;
+  /* border: 2px solid red; */
+}
+
+.sign-in-btn,
+.sign-btn {
+  margin-top: 40px;
+  padding: 5px 10px;
+  color: var(--blackfamily);
+  background-color: var(--darkbronze);
+  border: none;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+.sign-btn:hover,
+.sign-in-btn:hover {
+  background-color: rgb(65, 65, 16);
+}
+
+.acc-exists {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.acc-exists a {
+  color: yellowgreen;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.acc-exists a:hover {
+  color: yellow;
+}

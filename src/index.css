@@ -1,0 +1,29 @@
+:root {
+  /* Colors */
+  --white: #fff;
+  --blackfamily: rgb(29, 28, 28);
+  --verydarkbronze: rgb(75, 75, 30);
+  --darkbronze: rgb(99, 99, 48);
+  --lightbronze: rgb(126, 126, 95);
+  --lightbronze: rgb(170, 170, 152);
+
+  /* Font Sizes */
+  --mainheader: 3em;
+  --headers: 18px;
+
+  /* Width */
+  --max-width: 1500px;
+  --max-width-with-img: 1700px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  background-color: #f8f6eb;
+}

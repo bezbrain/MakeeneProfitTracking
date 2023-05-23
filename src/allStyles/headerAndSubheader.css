@@ -1,0 +1,262 @@
+header {
+  background-color: var(--blackfamily);
+}
+
+.nav-sect {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5vw;
+}
+
+.logo-img {
+  /* margin-top: 30px; */
+  width: 50px;
+}
+@media screen and (max-width: 1100px) {
+  .logo-img {
+    position: absolute;
+    top: 30px;
+    left: 10%;
+  }
+}
+
+.open {
+  display: none;
+  font-size: 2.5rem;
+  animation: gelatinEffect 1s ease-in-out infinite;
+  color: var(--darkbronze);
+}
+
+.close {
+  display: none;
+}
+
+@keyframes gelatinEffect {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 1100px) {
+  .close {
+    display: block;
+    position: absolute;
+    top: 40px;
+    /* right: 50px; */
+    font-size: 30px;
+  }
+  .open {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 10%;
+    font-size: 30px;
+  }
+}
+
+nav {
+  width: 65%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+@media screen and (max-width: 1100px) {
+  header nav {
+    min-height: 100vh;
+    background-color: #a5a590;
+    position: fixed;
+    width: 300px;
+    top: 0;
+    z-index: 20;
+    transition: ease 1s all;
+  }
+  .remove-nav {
+    right: -1000px;
+  }
+  .add-nav {
+    right: 0px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    height: 50vh;
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width: 840px) {
+  header {
+    margin-inline: 0;
+  }
+  header nav {
+    width: 100vw;
+  }
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  transition: ease 0.5s all;
+}
+nav ul li a:hover {
+  color: var(--darkbronze);
+}
+
+nav ul li a button {
+  background-color: var(--darkbronze);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: var(--white);
+  font-size: 18px;
+  transition: ease 0.5s all;
+  cursor: pointer;
+}
+nav ul li a button:hover {
+  background-color: var(--verydarkbronze);
+}
+
+/* ======== */
+/* SubHeader CSS */
+.sub-header-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 90vh; */
+  padding-bottom: 100px;
+  max-width: var(--max-width-with-img);
+  margin-left: auto;
+  padding-left: 5vw;
+}
+@media screen and (max-width: 1100px) {
+  .sub-header-con {
+    margin-top: 100px;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: 0;
+    /* border: 2px solid green; */
+  }
+
+  .know-profit-con {
+    padding-inline: 10%;
+    min-width: 100%;
+    z-index: 10;
+    /* border: 2px solid red; */
+  }
+
+  .know-profit-img {
+    min-width: 100%;
+    /* margin-left: 10%; */
+    margin-top: -50px;
+    max-height: 800px;
+  }
+}
+
+.know-profit-con {
+  /* border: 2px solid red; */
+  width: 50%;
+  color: var(--white);
+}
+
+h1 {
+  font-size: var(--mainheader);
+  line-height: 2cm;
+}
+@media screen and (max-width: 840px) {
+  h1 {
+    font-size: 6vw !important;
+  }
+}
+
+h1 span {
+  color: var(--darkbronze);
+}
+
+.know-profit-con h4 {
+  margin-block: 25px;
+  line-height: 0.7cm;
+}
+
+.know-profit-con p {
+  opacity: 0.8;
+  line-height: 0.7cm;
+}
+
+.know-profit-con p span {
+  color: var(--darkbronze);
+  font-weight: 900;
+}
+
+.know-profit-img {
+  /* border: 2px solid green; */
+  width: 48%;
+  height: 700px;
+}
+@media screen and (min-width: 1100px) {
+  .header-section {
+    /* height: 90vh; */
+    padding-bottom: 4vw;
+  }
+
+  header {
+    padding-inline: 5%;
+  }
+
+  .sub-header-con {
+    max-height: 90vh;
+    padding-left: 5%;
+  }
+
+  .know-profit-img {
+    height: 45vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .header-section {
+    /* min-height: 80vh; */
+  }
+
+  header {
+    padding-inline: 11%;
+  }
+
+  .sub-header-con {
+    max-height: 100vh;
+    padding-left: 11%;
+  }
+
+  .know-profit-con {
+    width: 40%;
+  }
+
+  h1 {
+    font-size: 3vw;
+  }
+
+  .know-profit-img {
+    width: 60%;
+    /* max-height: 750px; */
+  }
+}
