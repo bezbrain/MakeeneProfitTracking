@@ -1,7 +1,11 @@
+import { useGlobalContext } from "../../context";
+
 const SubHeader = () => {
+  const { setToggleNav } = useGlobalContext(); //Used to close nav section when subheader section is clicked
+
   return (
     <>
-      <section className="sub-header-con">
+      <section className="sub-header-con" onClick={() => setToggleNav(false)}>
         <div className="know-profit-con">
           <h1>
             Know Your True and Anticipated Profit with

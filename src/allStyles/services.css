@@ -1,6 +1,7 @@
 .service-section {
   max-width: var(--max-width);
-  margin: 6em auto;
+  margin: 0 auto;
+  padding-top: 6em;
   text-align: center;
 }
 

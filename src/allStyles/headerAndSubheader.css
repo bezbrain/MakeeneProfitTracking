@@ -1,5 +1,6 @@
 header {
   background-color: var(--blackfamily);
+  /* border: 2px solid red; */
 }
 
 .nav-sect {
@@ -9,7 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 5vw;
+  padding: 0px 5vw;
 }
 
 .logo-img {
@@ -159,7 +160,7 @@ nav ul li a button:hover {
   align-items: center;
   justify-content: space-between;
   /* height: 90vh; */
-  padding-bottom: 50px;
+  padding-block: 0em 3em;
   padding-left: 5vw;
   max-width: var(--max-width-with-img);
   margin-left: auto;
@@ -170,6 +171,7 @@ nav ul li a button:hover {
     flex-direction: column;
     width: fit-content;
     padding-bottom: 20px;
+    padding-block: 3em 1.5em;
   }
 
   .know-profit-con {

@@ -1,9 +1,12 @@
 import "../../allStyles/services.css";
+import { useGlobalContext } from "../../context";
 
 const Service = () => {
+  const { setToggleNav } = useGlobalContext(); //Used to close nav section when service section is clicked
+
   return (
     <>
-      <main>
+      <main onClick={() => setToggleNav(false)}>
         <section className="service-section" id="service">
           <button>exclusive features</button>
           <h2>Let Makeene Help You Keep Track of Your Realizable Profit</h2>
