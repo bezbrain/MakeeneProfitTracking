@@ -1,6 +1,5 @@
 header {
   background-color: var(--blackfamily);
-  /* border: 2px solid red; */
 }
 
 .nav-sect {
@@ -10,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 5vw;
+  padding: 30px 5vw;
 }
 
 .logo-img {
