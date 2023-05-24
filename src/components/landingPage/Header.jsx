@@ -7,6 +7,7 @@ import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 const Header = () => {
   const { toggleNav, setToggleNav } = useGlobalContext();
+
   return (
     <>
       <header id="top-page">
@@ -17,7 +18,10 @@ const Header = () => {
             src="https://i.ibb.co/Stw8cdK/6.jpg"
             alt="6"
           />
-          <nav className={`${toggleNav ? "add-nav" : "remove-nav"}`}>
+          <nav
+            className={`${toggleNav ? "add-nav" : "remove-nav"}`}
+            onClick={() => setToggleNav(false)}
+          >
             <ul>
               <FaTimes
                 className={`close ${toggleNav ? "add-close-anim" : ""}`}

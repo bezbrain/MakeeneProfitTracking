@@ -26,4 +26,5 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   background-color: #f8f6eb;
+  transition: ease 2s all;
 }

@@ -72,6 +72,13 @@ footer {
 .top-icon:hover {
   padding: 5px;
 }
+.remove-icon-when-at-the-top {
+  opacity: 0;
+  transition: ease 1s all;
+}
+.add-icon-when-at-the-top {
+  opacity: 1;
+}
 
 .top-icon a {
   text-decoration: none;

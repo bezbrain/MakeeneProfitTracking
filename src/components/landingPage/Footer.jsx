@@ -1,7 +1,32 @@
 import { FaCaretUp } from "react-icons/fa";
 import "../../allStyles/footer.css";
+import { useGlobalContext } from "../../context";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+  const { goTopIcon, setGoTopIcon } = useGlobalContext();
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scrollY === 0) {
+      setGoTopIcon("remove-icon-when-at-the-top");
+    } else {
+      setGoTopIcon("add-icon-when-at-the-top");
+    }
+  }, [scrollY, setGoTopIcon]);
+
   return (
     <>
       <footer>
@@ -25,9 +50,11 @@ const Footer = () => {
         </section>
       </footer>
       {/* Go to top icon */}
-      <div className="top-icon">
+      <div
+        className={`top-icon ${goTopIcon}`}
+        onClick={() => window.scrollTo(0, 0)}
+      >
         <a href="#top-page">
-          {/* <i className="fa-solid fa-caret-up"></i> */}
           <FaCaretUp />
         </a>
       </div>
