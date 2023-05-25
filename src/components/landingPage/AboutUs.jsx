@@ -61,7 +61,7 @@ const AboutUs = () => {
               business to move to the next level.
               <br />
               It can be overwelming and sometimes annoying when a vendor cannot
-              properly track his/her Realized and Ralizable Profits properly
+              properly track his/her Realized and Realizable Profits properly
               because of many debtors involved. This kind of challenge and other
               related challenges are what the MAKEENE Profut Tracking helps you
               with.
