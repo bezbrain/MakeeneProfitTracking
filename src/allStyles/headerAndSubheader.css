@@ -92,9 +92,9 @@ nav ul {
 }
 @media screen and (max-width: 1100px) {
   header nav {
+    position: fixed;
     min-height: 100vh;
     background-color: #a5a590;
-    position: fixed;
     width: 300px;
     top: 0;
     z-index: 20;
