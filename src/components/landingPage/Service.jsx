@@ -1,49 +1,63 @@
+import { useRef } from "react";
 import "../../allStyles/services.css";
 import { useGlobalContext } from "../../context";
+import { AnimatePage, AnimateOneSection } from "../AnimatedSection";
 
 const Service = () => {
-  const { setToggleNav } = useGlobalContext(); //Used to close nav section when service section is clicked
+  const { setToggleNav, scrollServiceRef } = useGlobalContext();
+  const sectionFourAnim = useRef(null);
+
+  window.onscroll = () => {
+    AnimatePage(scrollServiceRef); //service section animation
+    AnimateOneSection(sectionFourAnim);
+  };
 
   return (
     <>
-      <main onClick={() => setToggleNav(false)}>
-        <section className="service-section" id="service">
-          <button>exclusive features</button>
-          <h2>Let Makeene Help You Keep Track of Your Realizable Profit</h2>
-          {/* <!-- Service One --> */}
-          <summary className="service-and-img-con">
-            <img
-              className="service-img"
-              src="https://i.ibb.co/NpQdf19/Makeen-Financial-Charts-2-1.png"
-              alt=""
-            />
-            <div className="services-list">
-              <h3>Automate profit and debtors tracking</h3>
-              <p>
-                Track all unrealizable profits and debtors. Collect data, and
-                get reports on your business automatically. Everything in just
-                one single dashboard, including:
-              </p>
-              <ul>
-                <li>
-                  <span>Ascertainment of unrealized profit</span>
-                </li>
-                <li>
-                  <span>Provides a database that stores all debtor</span>
-                </li>
-                <li>
-                  <span>
-                    Gives advise if more debtors should be entertained or not
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Aggregates total debtors and presents it to all users
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </summary>
+      <main className="all-services" onClick={() => setToggleNav(false)}>
+        <section
+          className="service-section"
+          id="service"
+          ref={scrollServiceRef}
+        >
+          <div>
+            <button>exclusive features</button>
+            <h2>Let Makeene Help You Keep Track of Your Realizable Profit</h2>
+            {/* <!-- Service One --> */}
+            <summary className="service-and-img-con">
+              <img
+                className="service-img"
+                src="https://i.ibb.co/NpQdf19/Makeen-Financial-Charts-2-1.png"
+                alt=""
+              />
+              <div className="services-list">
+                <h3>Automate profit and debtors tracking</h3>
+                <p>
+                  Track all unrealizable profits and debtors. Collect data, and
+                  get reports on your business automatically. Everything in just
+                  one single dashboard, including:
+                </p>
+                <ul>
+                  <li>
+                    <span>Ascertainment of unrealized profit</span>
+                  </li>
+                  <li>
+                    <span>Provides a database that stores all debtor</span>
+                  </li>
+                  <li>
+                    <span>
+                      Gives advise if more debtors should be entertained or not
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      Aggregates total debtors and presents it to all users
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </summary>
+          </div>
           {/* <!-- Service Two --> */}
           <summary className="second-service-and-img">
             <div className="second-services-list-con">
@@ -112,7 +126,7 @@ const Service = () => {
           </summary>
         </section>
         {/* <!-- Service Four --> */}
-        <summary className="fourth-service-and-img">
+        <summary className="fourth-service-and-img" ref={sectionFourAnim}>
           <div className="fourth-services-list-con">
             <h3>Manage Unrealizable Profits</h3>
             <p>

@@ -315,3 +315,27 @@
   border-radius: 20px;
   box-shadow: 15px 12px 17px 30px rgba(0, 0, 0, 0.1);
 }
+
+/* Scroll Animation for Services */
+.service-section > div,
+.second-service-and-img,
+.third-service-and-img,
+.fourth-service-and-img {
+  transform: translateX(100%);
+  filter: blur(5px);
+  transition: all 1s ease;
+}
+
+.service-section > div:nth-of-type(even),
+.second-service-and-img:nth-of-type(even),
+.third-service-and-img:nth-of-type(even) {
+  transform: translateX(-100%);
+}
+
+.service-section > div.show,
+.second-service-and-img.show,
+.third-service-and-img.show,
+.fourth-service-and-img.show {
+  transform: translateX(0);
+  filter: blur(0);
+}
