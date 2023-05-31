@@ -278,6 +278,7 @@
 }
 
 .all-img-con {
+  overflow-y: hidden;
   position: relative;
   width: 50%;
   height: 600px;
@@ -285,7 +286,6 @@
 @media screen and (max-width: 840px) {
   .all-img-con {
     width: 100%;
-    overflow-y: hidden;
     /* max-height: 500px; */
   }
 }
